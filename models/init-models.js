@@ -8,6 +8,10 @@ var _dega_monster_team = require("./dega_monster_team");
 var _dega_news = require("./dega_news");
 var _dega_pvp_log = require("./dega_pvp_log");
 var _dega_quest = require("./dega_quest");
+var _factory = require("./factory");
+var _factory_type = require("./factory_type");
+var _island = require("./island");
+var _land = require("./land");
 var _monster_active_skill = require("./monster_active_skill");
 var _monster_status_effect = require("./monster_status_effect");
 var _user_login_Log = require("./user_login_Log");
@@ -23,6 +27,10 @@ function initModels(sequelize) {
   var dega_news = _dega_news(sequelize, DataTypes);
   var dega_pvp_log = _dega_pvp_log(sequelize, DataTypes);
   var dega_quest = _dega_quest(sequelize, DataTypes);
+  var factory = _factory(sequelize, DataTypes);
+  var factory_type = _factory_type(sequelize, DataTypes);
+  var island = _island(sequelize, DataTypes);
+  var land = _land(sequelize, DataTypes);
   var monster_active_skill = _monster_active_skill(sequelize, DataTypes);
   var monster_status_effect = _monster_status_effect(sequelize, DataTypes);
   var user_login_Log = _user_login_Log(sequelize, DataTypes);
@@ -47,6 +55,10 @@ function initModels(sequelize) {
     dega_news,
     dega_pvp_log,
     dega_quest,
+    factory,
+    factory_type,
+    island,
+    land,
     monster_active_skill,
     monster_status_effect,
     user_login_Log,
