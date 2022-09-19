@@ -13,7 +13,8 @@ routes.get("/", (req, res) => {
 });
 
 routes.post("/island/buy", Island.island_buy);
-routes.get("/island", Island.testqry);
+// routes.get("/island", Island.testqry);
+routes.get("/island", Island.get_island);
 
 
 export default routes;
