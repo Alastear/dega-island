@@ -6,7 +6,7 @@ var models = initModels(sequelize);
 const Island = require("./controller/Island.controller");
 const Factory = require("./controller/factory.controlle");
 const Factory_guarantee = require("./controller/factory_guarantee_five.controll");
-
+const Users = require("./controller/user.controlle")
 
 // สร้าง routing โดยใช้ HTTP GET 
 routes.get("/", (req, res) => {
@@ -22,6 +22,7 @@ routes.get("/users", Factory.get_users);
 routes.post("/gacha/factory", Factory.gacha_factory);
 routes.post("/gacha/factory/guarantee_unique", Factory_guarantee.gacha_factory_guarantee_unique);
 routes.post("/gacha/factory/guarantee", Factory_guarantee.gacha_factory_guarantee);
-
+//user
+routes.post("/user/whitelist", Users.whitelist);
 
 export default routes;
